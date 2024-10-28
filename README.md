@@ -97,7 +97,7 @@ To get a better idea of the accuracy of our data cleaning and concatenation task
 | Num Rows in Month with Most | 7578372 | 7578372 | 0 | 0 |
 | Null_TS | 7123792 | 7123792 | 0 | 0 |
 | Null_DT | 0 | 0 | 0 | 0 |
-| Null_Local | 0 | 234843 | 109835 | 1 |
+| Null_Local | 0 | 234843 | 234843 | 1 |
 | Null_CN | 0 | 0 | 0 | 0 |
 | Num 5 on High Volume Cards | 14987.0 | 14987 | No | NA |
 | Num Rows for Number 5 | 460630 | 460625 | 5 | 0.00 |
@@ -120,6 +120,6 @@ The main striking difference between the query results were in the number of nul
 
 In completing this project, I gained hands-on experience in engineering data flows from raw files to a cloud-hosted environment. This experience has helped me understand the intricacies of data cleaning, transformation, and storage.
 
-There were a few different sub-tasks in this project that were of soem challenge. Getting the Google BigQuery authentication was perhaps the most challenging aspect. It required setting up IAM permissionings in GBQ, and getting an authentication key stored and configured on my local machine. Once this was set up, connecting and querying my GBQ project from a local Python script was easy. Another big challenge in this project was just knowing where to start. Given we had 53 zipped CSV files, there was no way to really analyze and open each one for cleaning individually. Instead, we had to make assumptions along the way and try to clean and concatenate data sets as programmatically as possible, setting up exception flags to try to catch errors. Finally, it was challenging to run the script on a computer with relatively low RAM. After many instances of erroring out due to memory issues, we had to add memory management controls to all of our code, deleting environment variables to save our RAM. 
+There were a few different sub-tasks in this project that were of some challenge. Getting the Google BigQuery authentication was perhaps the most challenging aspect. It required setting up IAM permissionings in GBQ, and getting an authentication key stored and configured on my local machine. Once this was set up, connecting and querying my GBQ project from a local Python script was easy. Another big challenge in this project was just knowing where to start. Given we had 53 zipped CSV files, there was no way to really analyze and open each one for cleaning individually. Instead, we had to make assumptions along the way and try to clean and concatenate data sets as programmatically as possible, setting up exception flags to try to catch errors. Finally, it was challenging to run the script on a computer with relatively low RAM. After many instances of erroring out due to memory issues, we had to add memory management controls to all of our code, deleting environment variables to save our RAM. 
 
 Overall, the experience of creating a subset of owner data and creating summary tables in a SQLite database was enjoyable. It underscores the importance of choosing the right tools for processing and storing data. Automating tasks such as sample generation and summary table creation can streamline the work it would take to repeat that task.
